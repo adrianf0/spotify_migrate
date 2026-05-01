@@ -58,7 +58,9 @@ def authenticate():
                 "user-follow-modify"
             ),
             # cache_path=".spotipyoauthcache2",
-        )
+        ),
+        requests_timeout=10,
+        retries=10
     )
 
     logout_url = "https://spotify.com/logout"
