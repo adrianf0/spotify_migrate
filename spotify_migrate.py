@@ -1,7 +1,8 @@
+
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import pandas as pd
-from pandas.io.json import json_normalize
+from pandas import json_normalize
 from media_types import media_types
 import yaml
 import requests
