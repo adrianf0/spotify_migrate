@@ -34,7 +34,7 @@ def authenticate():
         auth_manager=SpotifyOAuth(
             client_id=credentials["client_id"],
             client_secret=credentials["client_secret"],
-            redirect_uri="http://localhost:8080/callback/",
+            redirect_uri="http://127.0.0.1:8080/callback/",
             username=credentials["username_old"],
             scope=("user-library-read " "playlist-read-private " "user-follow-read "),
             # cache_path=".spotipyoauthcache",
@@ -45,7 +45,7 @@ def authenticate():
         auth_manager=SpotifyOAuth(
             client_id=credentials["client_id"],
             client_secret=credentials["client_secret"],
-            redirect_uri="http://localhost:8080/callback/",
+            redirect_uri="http://127.0.0.1:8080/callback/",
             username=credentials["username_new"],
             scope=(
                 "user-library-read "
