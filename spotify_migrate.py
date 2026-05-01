@@ -174,7 +174,7 @@ def recreate_playlist(playlist_id, creds_old, creds_new):
     # it appears that spotify generated mosaic images for playlists have
     # multiple sizes, whereas custom do not (and height and width are None)
     # We'll use this to only copy custom images over
-    custom_img_used = True if len(img_info) == 1 else False
+    custom_img_used = False
 
     # create a new playlist
     ret = creds_new.user_playlist_create(
