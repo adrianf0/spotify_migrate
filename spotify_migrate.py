@@ -259,6 +259,7 @@ def main():
     print("Beginning spotify migrate... 🎶💻🎤")
     print("Authenticating... 🔑")
     (sp, sp2) = authenticate()
+    wipe_everything(sp2)
     print("Copying over library... 🎷")
     copy_all_to_new_account(sp, sp2)
     print("All done here! Enjoy ✨")
