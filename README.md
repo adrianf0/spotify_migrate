@@ -19,7 +19,7 @@ Then you need to create an app on __Spotify for Developers__ in order to get cre
 2. Log in (with either the old or new Spotify account, doesn't matter which)
 3. Click 'create a new app', give it a name and click 'create'
 4. Click 'show client secret', then copy the `Client ID` and `Client Secret` into `credentials.yml`
-5. Click 'edit settings' and add `http://localhost:8080/callback/` and `http://www.spotify.com/logout` to the `Redirect URIs`
+5. Click 'edit settings' and add `http://127.0.0.1:8080/callback/` and `http://www.spotify.com/logout` to the `Redirect URIs`
 
 Once `credentials.yml` is filled out, you can run from the command line: `python3 spotify_migrate.py`.
 
