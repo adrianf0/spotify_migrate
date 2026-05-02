@@ -163,9 +163,9 @@ def recreate_playlist(playlist_id, creds_old, creds_new):
     # get uris of items in playlist
     results = creds_old.playlist(playlist_id)
     track_uris = [
-        x["track"]["uri"]
-        for x in results["tracks"]["items"]
-        if x["track"]["is_local"] == False
+        x["item"]["uri"]
+        for x in results["items"]["items"]
+        if x["item"]["is_local"] == False
     ]
 
     # get the cover image
@@ -177,8 +177,7 @@ def recreate_playlist(playlist_id, creds_old, creds_new):
     custom_img_used = False
 
     # create a new playlist
-    ret = creds_new.user_playlist_create(
-        user=credentials["username_new"],
+    ret = creds_new.current_user_playlist_create(
         name=results["name"],
         public=results["public"],
         description=results["description"],
